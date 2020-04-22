@@ -1,0 +1,11 @@
+
+.cell{
+    border-style: solid;
+    border-width: thin;
+    display: inline-block;
+}
+
+div#grid {
+    border-style: solid;
+    display: inline-block;
+}
