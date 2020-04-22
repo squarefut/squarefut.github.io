@@ -10,7 +10,7 @@ div#grid {
     display: inline-block;
 }
 
-@media screen and (min-width: 200px) and (max-width: 767px) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
     html {
       transform: rotate(-90deg);
       transform-origin: left top;
@@ -22,7 +22,7 @@ div#grid {
     }
   }
 
-@media screen and (min-width: 1292px) {
+@media screen and (orientation: landscape) {
     html {
       transform: none;
       transform-origin: none;
