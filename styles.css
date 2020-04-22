@@ -12,7 +12,7 @@ div#grid {
 
 @media screen and (orientation: portrait) {
     html {
-      transform: rotate(-90deg);
+      transform: rotate(+90deg);
       transform-origin: left top;
       width: 100vh;
       overflow-x: hidden;
