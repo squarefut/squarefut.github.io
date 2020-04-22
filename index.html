@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="grid">
+      <div v-for="row in grid">
+        {{width}}
+        <grid-cell
+          v-for="plant in grid[row.id].row"
+          v-bind:cell="plant"
+          v-bind:width="width"
+          v-bind:key="plant.id"
+        >
+        </grid-cell>
+      </div>
+    </div>
+
+    <script>
+      Vue.component("grid-cell", {
+        props: ["cell", "width"],
+        template: "<div class='cell' style='width:150px;height:150px'>{{cell.plant}}</div>"
+      });
+
+      var plant = {
+        cilantro: {
+          icon: "cilantro",
+          count: 9
+        },
+        garlic: {
+          icon: "garlic",
+          count: 4
+        }
+      };
+
+      var app = new Vue({
+        el: "#grid",
+        data: {  
+          grid: [
+            {
+              id: 0,
+              row: [
+                { id: 0, plant: plant.garlic },
+                { id: 1, plant: plant.cilantro },
+                { id: 2, plant: plant.garlic }
+              ]
+            },
+            {
+              id: 1,
+              row: [
+                { id: 3, plant: plant.cilantro },
+                { id: 4, plant: plant.cilantro },
+                { id: 5, plant: plant.garlic }
+              ]
+            },
+            {
+              id: 2,
+              row: [
+                { id: 6, plant: plant.cilantro },
+                { id: 7, plant: plant.garlic },
+                { id: 8, plant: plant.cilantro }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
