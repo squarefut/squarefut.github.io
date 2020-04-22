@@ -18,7 +18,7 @@ div#grid {
     div#portraitAlert p {
         margin-left: auto;
         margin-right: auto;
-        font-size: x-large;
+        font-size: 3em;
     }
     div#grid {
         display: none;
