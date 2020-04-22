@@ -15,7 +15,7 @@ div#grid {
         display: flex;
         align-items: center;
     }
-    div#portraitAlert p{
+    div#portraitAlert p {
         margin-left: auto;
         margin-right: auto;
     }
