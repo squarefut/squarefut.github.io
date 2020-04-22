@@ -8,11 +8,9 @@
   <body>
     <div id="grid">
       <div v-for="row in grid">
-        {{width}}
         <grid-cell
           v-for="plant in grid[row.id].row"
           v-bind:cell="plant"
-          v-bind:width="width"
           v-bind:key="plant.id"
         >
         </grid-cell>
@@ -22,7 +20,7 @@
     <script>
       Vue.component("grid-cell", {
         props: ["cell", "width"],
-        template: "<div class='cell' style='width:150px;height:150px'>{{cell.plant}}</div>"
+        template: "<div class='cell' style='width:140px;height:140px'>{{cell.plant}}</div>"
       });
 
       var plant = {
