@@ -7,28 +7,29 @@
 
 div#grid {
     border-style: solid;
-    display: inline-block;
 }
 
 @media screen and (orientation: portrait) {
-    html {
-      transform: rotate(-90deg);
-      transform-origin: right top;
-      width: 100vh;
-      overflow-x: hidden;
-      position: absolute;
-      top: 100%;
-      left: 0;
+    div#portraitAlert {
+        height: 25em;
+        display: flex;
+        align-items: center;
     }
-  }
+    div#portraitAlert p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div#grid {
+        display: none;
+    }
+}
 
 @media screen and (orientation: landscape) {
-    html {
-      transform: none;
-      transform-origin: none;
-      width: 100%;
-      overflow-x: none;
-      position: relative;
+    div#portraitAlert{
+        display: none;
     }
-  }
+    div#grid {
+        display: inline-block;
+    }
+}
 

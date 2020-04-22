@@ -7,7 +7,6 @@
   </head>
   <body>
     <div id="grid">
-      {{width}} {{height}}
       <div v-for="row in grid">
         <grid-cell
           v-for="plant in grid[row.id].row"
@@ -16,6 +15,9 @@
         >
         </grid-cell>
       </div>
+    </div>
+    <div id="portraitAlert">
+      <p>Flip your phone sideways (landscape)</p>
     </div>
 
     <script>
