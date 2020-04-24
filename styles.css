@@ -162,3 +162,13 @@ body {
     padding: .8em;
     font-size: 1.5em;
 }
+
+@media only screen and (max-width: 600px) {
+    .searchinput input[type=text] {
+        font-size: 2em;
+    }
+
+    .plantSearchResult a {
+        font-size: 2em;
+    }
+}
