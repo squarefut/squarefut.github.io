@@ -140,7 +140,6 @@ body {
 
 .searchinput input[type=text] {
     padding: .5em;
-    margin-right: 1em;
     border: none;
     font-size: 1.5em;
     width: 100%;
@@ -148,7 +147,9 @@ body {
 
 .searchcancel {
     display: block;
-    background-color: maroon;
+    font-size: 1.5em;
+    padding: .5em;
+    color: #3F51B5;
 }
 
 .plantSearchResult a{
