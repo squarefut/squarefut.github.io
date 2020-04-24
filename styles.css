@@ -141,13 +141,13 @@ body {
 .searchinput input[type=text] {
     padding: .5em;
     border: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 100%;
 }
 
 .searchcancel {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: .5em;
     color: #3F51B5;
 }
@@ -160,15 +160,5 @@ body {
     border-radius: 5px;
     margin: .8em;
     padding: .8em;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
-
-/* @media only screen and (max-width: 600px) {
-    .searchinput input[type=text] {
-        font-size: 2em;
-    }
-
-    .plantSearchResult a {
-        font-size: 2em;
-    }
-} */
