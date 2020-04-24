@@ -4,7 +4,6 @@
     grid-template-columns: 1fr [box-left] auto [box-right] 1fr;
     grid-template-rows: 1fr [box-top] auto [box-bottom] 1fr;
     height: 95vh;
-    width: 100vw;
 }
 
 .box {
@@ -20,7 +19,7 @@
     grid-template-rows: 1fr [cell-top] auto [cell-bottom] 1fr;
 }
 
-.rowccenterer {
+.grid {
     grid-column: cell-left / cell-right;
     grid-row: cell-top / cell-bottom;
 }
