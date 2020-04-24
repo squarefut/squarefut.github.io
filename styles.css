@@ -46,11 +46,6 @@ body {
     justify-content: space-around;
 }
 
-.plantContainer {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .plant-square {
     position: relative;
     margin: .35vmin;
