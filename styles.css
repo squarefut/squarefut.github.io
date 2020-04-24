@@ -34,11 +34,39 @@ body {
 
 .cell {
     background-color: grey;
-    display: inline-block;
-    position: relative;
+    display: block;
     margin: 1px;
     width: 15vmin;
     height: 15vmin;
 }
 
+.plantContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
+.plantContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant-square {
+    position: relative;
+    margin: .35vmin;
+    border: .1vmin solid;
+    box-sizing: border-box;
+  }
+  
+  .plant-square::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+  
+  .plant-square .content {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+  }

@@ -14,7 +14,6 @@
                         <grid-cell
                             v-for="plant in grid[row.id].row"
                             v-bind:cell="plant"
-                            v-bind:width="width"
                             v-bind:key="plant.id"
                         >
                         </grid-cell>
@@ -27,17 +26,45 @@
       <script>
         Vue.component("grid-cell", {
           props: ["cell", "width"],
-          template: "<div class='cell'>{{cell.plant.icon}}</div>"
+          template: `
+            <div class='cell'>
+              <plant v-bind:plant="cell.plant" v-bind:count="cell.plant.count">
+              </plant>
+            </div>`
         });
-  
+
+        Vue.component("plant", {
+          props: ["plant", "count"],
+          template: `
+            <div class="plantContainer">
+              <div v-for="n in plant.count" class="plant-square" :style="{flexBasis: plant.fbasis}">
+                <div class="content">
+                </div>
+              </div>
+            </div>
+            `
+        });
+
         var plant = {
           cilantro: {
-            icon: "cilantro",
-            count: 9
+            name: "cilantro",
+            count: 9,
+            fbasis: "calc(33.333% - .8vmin)"
           },
           garlic: {
-            icon: "garlic",
-            count: 4
+            name: "garlic",
+            count: 4,
+            fbasis: "calc(50% - .8vmin)"
+          },
+          basil: {
+            name: "basil",
+            count: 2,
+            fbasis: "calc(51% - .8vmin)"
+          },
+          arugula: {
+            name: "basil",
+            count: 16,
+            fbasis: "calc(25% - .8vmin)"
           }
         };
   
@@ -50,43 +77,43 @@
                 row: [
                   { id: "0,0", plant: plant.garlic },
                   { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic },
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic }
+                  { id: "0,2", plant: plant.basil },
+                  { id: "0,3", plant: plant.garlic },
+                  { id: "0,4", plant: plant.arugula },
+                  { id: "0,5", plant: plant.garlic }
                 ]
               },
               {
                 id: 1,
                 row: [
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic },
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic }
+                  { id: "1,0", plant: plant.basil },
+                  { id: "1,1", plant: plant.cilantro },
+                  { id: "1,2", plant: plant.arugula },
+                  { id: "1,3", plant: plant.garlic },
+                  { id: "1,4", plant: plant.cilantro },
+                  { id: "1,5", plant: plant.garlic }
                 ]
               },
               {
                 id: 2,
                 row: [
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic },
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic }
+                  { id: "2,0", plant: plant.garlic },
+                  { id: "2,1", plant: plant.cilantro },
+                  { id: "2,2", plant: plant.garlic },
+                  { id: "2,3", plant: plant.garlic },
+                  { id: "2,4", plant: plant.basil },
+                  { id: "2,5", plant: plant.arugula }
                 ]
               },
               {
                 id: 3,
                 row: [
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic },
-                  { id: "0,0", plant: plant.garlic },
-                  { id: "0,1", plant: plant.cilantro },
-                  { id: "0,2", plant: plant.garlic }
+                  { id: "3,0", plant: plant.garlic },
+                  { id: "3,1", plant: plant.cilantro },
+                  { id: "3,2", plant: plant.arugula },
+                  { id: "3,3", plant: plant.basil },
+                  { id: "3,4", plant: plant.cilantro },
+                  { id: "3,5", plant: plant.garlic }
                 ]
               }
             ]
