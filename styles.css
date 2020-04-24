@@ -4,6 +4,7 @@
     grid-template-columns: 1fr [box-left] auto [box-right] 1fr;
     grid-template-rows: 1fr [box-top] auto [box-bottom] 1fr;
     height: 95vh;
+    width: 100vw;
 }
 
 .box {
@@ -34,8 +35,8 @@
     display: inline-block;
     position: relative;
     margin: 1px;
-    width: 20vmin;
-    height: 20vmin;
+    width: 15vmin;
+    height: 15vmin;
 }
 
 
