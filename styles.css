@@ -109,3 +109,54 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.plantMenuContainer {
+    background-color: darkslategray;
+    opacity: 90%;
+    position: fixed;
+    height: 99vh;
+    width: 99vw;
+    grid-template-columns: 1fr [menu-left] auto [menu-right] 1fr;
+    display: grid;
+}
+
+.plantMenu {
+    grid-column: menu-left / menu-right;
+    background-color: white;
+}
+
+
+.searchbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: gray;
+}
+
+.searchinput {
+    display: block;
+    margin-right: 2em;
+}
+
+.searchinput input[type=text] {
+    padding: 6px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    width: 100%;
+}
+
+.searchcancel {
+    display: block;
+    background-color: maroon;
+}
+
+.plantSearchResult a{
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}

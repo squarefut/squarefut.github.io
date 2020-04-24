@@ -6,20 +6,34 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-      <div class="ground">
+      <div class="ground" id="grid">
         <div class="box">
             <div class="boxcenterer">
-                <div class="grid" id="grid">
+                <div class="grid">
                     <div class="row" v-for="row in grid">
                         <grid-cell
                             v-for="plant in grid[row.id].row"
                             v-bind:cell="plant"
                             v-bind:key="plant.id"
+                            v-on:select-plant="viewplants"
                         >
                         </grid-cell>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="plantMenuContainer" v-if="plantSelection.active">
+          <div class="plantMenu">
+            <div class='searchbar'>
+              <div class='searchinput'>
+                <input type="text" id="plant" name="plant" placeholder="search for a plant to add">
+              </div>
+              <button class="searchcancel" v-on:click="cancelPlantSelection">cancel</button>
+            </div>
+            <div class="plantSearchResult">
+                <a v-for="plant in plants">{{plant.name}}</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -27,7 +41,7 @@
         Vue.component("grid-cell", {
           props: ["cell", "width"],
           template: `
-            <div class='cell'>
+            <div class='cell' v-on:click="$emit('select-plant', cell.id)">
               <plant v-bind:plant="cell.plant" v-bind:count="cell.plant.count">
               </plant>
             </div>`
@@ -47,30 +61,34 @@
 
         var plant = {
           arugula: {
-            name: "basil",
+            name: "Arugula",
             count: 16
           },
           cilantro: {
-            name: "cilantro",
+            name: "Cilantro",
             count: 9
           },
           garlic: {
-            name: "garlic",
+            name: "Garlic",
             count: 4
           },
           basil: {
-            name: "basil",
+            name: "Basil",
             count: 2
           },
           eggplant: {
-            name: "basil",
+            name: "Eggplant",
             count: 1
           }
         };
   
         var app = new Vue({
           el: "#grid",
-          data: {  
+          data: {
+            plantSelection: {
+              active: false
+            },
+            plants: plant, 
             grid: [
               {
                 id: 0,
@@ -117,6 +135,17 @@
                 ]
               }
             ]
+          },
+          methods: {
+            viewplants: function (event) {
+              this.plantSelection.active = true;
+              this.plantSelection.cell = event;
+            },
+            cancelPlantSelection: function (event) {
+              this.plantSelection = {
+                active: false
+              }
+            }
           }
         });
       </script>
