@@ -143,6 +143,7 @@ body {
     border: none;
     font-size: 1.2em;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .searchcancel {
@@ -150,6 +151,7 @@ body {
     font-size: 1.2em;
     padding: .5em;
     color: #3F51B5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .plantSearchResult a{
@@ -161,4 +163,5 @@ body {
     margin: .8em;
     padding: .8em;
     font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
