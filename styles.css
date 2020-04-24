@@ -36,8 +36,20 @@ body {
     background-color: grey;
     display: block;
     margin: 1px;
-    width: 15vmin;
-    height: 15vmin;
+}
+
+@media (orientation: landscape) {
+    .cell {
+        width: 21vmin;
+        height: 21vmin;
+    }
+}
+
+@media (orientation: portrait) {
+    .cell {
+        width: 15vmin;
+        height: 15vmin;
+    }
 }
 
 .plantContainer {
