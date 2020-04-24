@@ -43,12 +43,18 @@ body {
         width: 21vmin;
         height: 21vmin;
     }
+    .plant-square:nth-last-child(2):first-child ~ .plant-square {
+        transform: translateY(10vmin);
+    }
 }
 
 @media (orientation: portrait) {
     .cell {
         width: 15vmin;
         height: 15vmin;
+    }
+    .plant-square:nth-last-child(2):first-child ~ .plant-square {
+        transform: translateY(7vmin);
     }
 }
 
@@ -74,10 +80,6 @@ body {
 .plant-square:nth-last-child(2):first-child,
 .plant-square:nth-last-child(2):first-child ~ .plant-square {
     flex-basis: calc(50% - 1vmin);
-}
-
-.plant-square:nth-last-child(2):first-child ~ .plant-square {
-    transform: translateY(7vmin);
 }
 
 .plant-square:nth-last-child(4):first-child,
