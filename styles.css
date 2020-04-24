@@ -1,6 +1,9 @@
+body {
+    background-color: darkslategray;
+}
+
 .ground {
     display: grid;
-    background-color: darkslategray;
     grid-template-columns: 1fr [box-left] auto [box-right] 1fr;
     grid-template-rows: 1fr [box-top] auto [box-bottom] 1fr;
     height: 95vh;
