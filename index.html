@@ -1,75 +1,97 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My first Vue app</title>
+    <title>SquareFut | Raised Bed Square Foot Gardening Planner</title>
     <script src="https://unpkg.com/vue"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div id="grid">
-      <div v-for="row in grid">
-        <grid-cell
-          v-for="plant in grid[row.id].row"
-          v-bind:cell="plant"
-          v-bind:key="plant.id"
-        >
-        </grid-cell>
+      <div class="ground">
+        <div class="box">
+            <div class="boxcenterer">
+                <div class="rowccenterer" id="grid">
+                    <div class="row" v-for="row in grid">
+                        <grid-cell
+                            v-for="plant in grid[row.id].row"
+                            v-bind:cell="plant"
+                            v-bind:width="width"
+                            v-bind:key="plant.id"
+                        >
+                        </grid-cell>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
-    </div>
-    <div id="portraitAlert">
-      <p>Flip your phone sideways (landscape)</p>
-    </div>
 
-    <script>
-      Vue.component("grid-cell", {
-        props: ["cell", "width"],
-        template: "<div class='cell' style='width:140px;height:140px'>{{cell.plant}}</div>"
-      });
-
-      var plant = {
-        cilantro: {
-          icon: "cilantro",
-          count: 9
-        },
-        garlic: {
-          icon: "garlic",
-          count: 4
-        }
-      };
-
-      var app = new Vue({
-        el: "#grid",
-        data: {  
-          width: window.screen.width,
-          height: window.screen.height,
-          grid: [
-            {
-              id: 0,
-              row: [
-                { id: 0, plant: plant.garlic },
-                { id: 1, plant: plant.cilantro },
-                { id: 2, plant: plant.garlic }
-              ]
-            },
-            {
-              id: 1,
-              row: [
-                { id: 3, plant: plant.cilantro },
-                { id: 4, plant: plant.cilantro },
-                { id: 5, plant: plant.garlic }
-              ]
-            },
-            {
-              id: 2,
-              row: [
-                { id: 6, plant: plant.cilantro },
-                { id: 7, plant: plant.garlic },
-                { id: 8, plant: plant.cilantro }
-              ]
-            }
-          ]
-        }
-      });
-    </script>
+      <script>
+        Vue.component("grid-cell", {
+          props: ["cell", "width"],
+          template: "<div class='cell'>{{cell.plant.icon}}</div>"
+        });
+  
+        var plant = {
+          cilantro: {
+            icon: "cilantro",
+            count: 9
+          },
+          garlic: {
+            icon: "garlic",
+            count: 4
+          }
+        };
+  
+        var app = new Vue({
+          el: "#grid",
+          data: {  
+            grid: [
+              {
+                id: 0,
+                row: [
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic },
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic }
+                ]
+              },
+              {
+                id: 1,
+                row: [
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic },
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic }
+                ]
+              },
+              {
+                id: 2,
+                row: [
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic },
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic }
+                ]
+              },
+              {
+                id: 3,
+                row: [
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic },
+                  { id: "0,0", plant: plant.garlic },
+                  { id: "0,1", plant: plant.cilantro },
+                  { id: "0,2", plant: plant.garlic }
+                ]
+              }
+            ]
+          }
+        });
+      </script>
   </body>
 </html>
