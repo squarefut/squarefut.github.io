@@ -28,7 +28,7 @@
           <div class="plantMenu">
             <div class='searchbar'>
               <div class='searchinput'>
-                <input type="text" id="plant" name="plant" placeholder="Search Plant">
+                <!-- <input type="text" id="plant" name="plant" placeholder="Search Plant"> -->
               </div>
               <a class="searchcancel" v-on:click="cancelPlantSelection">Cancel</a>
             </div>
@@ -38,7 +38,7 @@
                     <p class="plantName">{{plant.name}}</p>
                     <p class="plantInfo">{{plant.count}} per square</p>
                   </div>
-                  <div class="plantMenuIcon" v-bind:class="plant.name"></div>
+                  <div class="plantMenuIcon" v-bind:class="plant.class"></div>
                 </a>
             </div>
           </div>
@@ -59,7 +59,7 @@
           props: ["plant"],
           template: `
             <div class="plantContainer" v-if="plant">
-              <div v-for="n in plant.count" class="plant-square" v-bind:class="plant.name">
+              <div v-for="n in plant.count" class="plant-square" v-bind:class="plant.class">
                 <div class="content">
                 </div>
               </div>
@@ -70,42 +70,52 @@
         var plant = {
           arugula: {
             name: "Arugula",
+            class: "arugula",
             count: 16
           },
           asparagus: {
             name: "Asparagus",
+            class: "asparagus",
             count: 1
           },
           basil: {
             name: "Basil",
+            class: "basil",
             count: 2
           },
           beans: {
             name: "Beans",
+            class: "beans",
             count: 9
           },
           beets: {
             name: "Beets",
+            class: "beets",
             count: 9
           },
           bokchoy: {
-            name: "BokChoy",
+            name: "Bok Choy",
+            class: "bokChoy",
             count: 4
           },
           broccoli: {
             name: "Broccoli",
+            class: "broccoli",
             count: 1
           },
           cilantro: {
             name: "Cilantro",
+            class: "cilantro",
             count: 9
           },
           eggplant: {
             name: "Eggplant",
+            class: "eggplant",
             count: 1
           },
           garlic: {
             name: "Garlic",
+            class: "garlic",
             count: 4
           }
         };
