@@ -190,7 +190,7 @@ body {
 
 .plantSearchResult {
     overflow-y: scroll;
-    height: 90vh;
+    height: 80vh;
 }
 
 .plantSearchResult a{
