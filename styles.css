@@ -116,26 +116,6 @@ body {
     border-style: none;
 }
 
-.Eggplant {
-    background-image: url('eggplant.png');
-}
-
-.Garlic {
-    background-image: url('garlic.png');
-}
-
-.Arugula {
-    background-image: url('arugula.png');
-}
-
-.Cilantro {
-    background-image: url('cilantro.png');
-}
-
-.Basil {
-    background-image: url('basil.png');
-}
-
 .plantMenuContainer {
     background-color: darkslategray;
     opacity: 90%;
@@ -221,4 +201,45 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     border-style: none;
+}
+
+/* Plant Pics */
+.Arugula {
+    background-image: url('assets/arugula.png');
+}
+
+.Asparagus {
+    background-image: url('assets/asparagus.png');
+}
+
+.Basil {
+    background-image: url('assets/basil.png');
+}
+
+.Beans {
+    background-image: url('assets/beans.png');
+}
+
+.Beets {
+    background-image: url('assets/beets.png');
+}
+
+.BokChoy {
+    background-image: url('assets/bokchoy.png');
+}
+
+.Broccoli {
+    background-image: url('assets/broccoli.png');
+}
+
+.Cilantro {
+    background-image: url('assets/cilantro.png');
+}
+
+.Eggplant {
+    background-image: url('assets/eggplant.png');
+}
+
+.Garlic {
+    background-image: url('assets/garlic.png');
 }
