@@ -33,7 +33,10 @@
               <a class="searchcancel" v-on:click="cancelPlantSelection">Cancel</a>
             </div>
             <div class="plantSearchResult">
-                <a v-for="plant in plants" v-on:click="selectplant(plant)">{{plant.name}}</a>
+                <a v-for="plant in plants" v-on:click="selectplant(plant)">
+                  <p>{{plant.name}}</p>
+                  <div class="plantMenuIcon" v-bind:class="plant.name"></div>
+                </a>
             </div>
           </div>
         </div>

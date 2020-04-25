@@ -110,39 +110,30 @@ body {
     width: 100%;
 }
 
-.Eggplant {
-    background-image: url('eggplant.png');
+.plant-square {
     background-size: contain;
     background-repeat: no-repeat;
     border-style: none;
+}
+
+.Eggplant {
+    background-image: url('eggplant.png');
 }
 
 .Garlic {
     background-image: url('garlic.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-style: none;
 }
 
 .Arugula {
     background-image: url('arugula.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-style: none;
 }
 
 .Cilantro {
     background-image: url('cilantro.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-style: none;
 }
 
 .Basil {
-    background-image: url('baisl.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-style: none;
+    background-image: url('basil.png');
 }
 
 .plantMenuContainer {
@@ -189,8 +180,13 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.plantSearchResult {
+    overflow-y: scroll;
+    height: 90vh;
+}
+
 .plantSearchResult a{
-    display: block;
+    display: flex;
     border-style: solid;
     border-width: 1px;
     border-color: gray;
@@ -199,4 +195,16 @@ body {
     padding: .8em;
     font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.plantMenuIcon {
+    margin-left: 20vmin;
+    min-width: 100px;
+    min-height: 100px;
+    width: 10vmin;
+    height: 10vmin;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-style: none;
 }
