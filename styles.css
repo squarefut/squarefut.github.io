@@ -110,8 +110,36 @@ body {
     width: 100%;
 }
 
+.Eggplant {
+    background-image: url('eggplant.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
 .Garlic {
     background-image: url('garlic.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+.Arugula {
+    background-image: url('arugula.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+.Cilantro {
+    background-image: url('cilantro.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+.Basil {
+    background-image: url('baisl.png');
     background-size: contain;
     background-repeat: no-repeat;
     border-style: none;
