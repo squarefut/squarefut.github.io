@@ -53,7 +53,7 @@
           props: ["plant"],
           template: `
             <div class="plantContainer" v-if="plant">
-              <div v-for="n in plant.count" class="plant-square">
+              <div v-for="n in plant.count" class="plant-square" v-bind:class="plant.name">
                 <div class="content">
                 </div>
               </div>

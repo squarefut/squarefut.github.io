@@ -110,6 +110,13 @@ body {
     width: 100%;
 }
 
+.Garlic {
+    background-image: url('garlic.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
 .plantMenuContainer {
     background-color: darkslategray;
     opacity: 90%;
