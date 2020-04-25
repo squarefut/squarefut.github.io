@@ -232,8 +232,40 @@ body {
     background-image: url('assets/broccoli.png');
 }
 
+.brusselsSprout {
+    background-image: url('assets/brusselsSprout.png');
+}
+
+.cabbage {
+    background-image: url('assets/cabbage.png');
+}
+
+.carrots {
+    background-image: url('assets/carrots.png');
+}
+
+.cauliflower {
+    background-image: url('assets/cauliflower.png');
+}
+
+.celery {
+    background-image: url('assets/celery.png');
+}
+
+.chives {
+    background-image: url('assets/chives.png');
+}
+
 .cilantro {
     background-image: url('assets/cilantro.png');
+}
+
+.collard {
+    background-image: url('assets/collard.png');
+}
+
+.corn {
+    background-image: url('assets/corn.png');
 }
 
 .eggplant {
