@@ -268,10 +268,86 @@ body {
     background-image: url('assets/corn.png');
 }
 
+.cucumber {
+    background-image: url('assets/cucumber.png');
+}
+
+.dill {
+    background-image: url('assets/dill.png');
+}
+
 .eggplant {
     background-image: url('assets/eggplant.png');
 }
 
 .garlic {
     background-image: url('assets/garlic.png');
+}
+
+.kale {
+    background-image: url('assets/kale.png');
+}
+
+.kohlrabi {
+    background-image: url('assets/kohlrabi.png');
+}
+
+.lettuce {
+    background-image: url('assets/lettuce.png');
+}
+
+.leeks {
+    background-image: url('assets/leeks.png');
+}
+
+.mint {
+    background-image: url('assets/mint.png');
+}
+
+.mustardGreens {
+    background-image: url('assets/mustardGreens.png');
+}
+
+.okra {
+    background-image: url('assets/okra.png');
+}
+
+.oregano {
+    background-image: url('assets/oregano.png');
+}
+
+.parsley {
+    background-image: url('assets/parsley.png');
+}
+
+.parsnips {
+    background-image: url('assets/parsnips.png');
+}
+
+.peas {
+    background-image: url('assets/peas.png');
+}
+
+.peppers {
+    background-image: url('assets/peppers.png');
+}
+
+.potatoes {
+    background-image: url('assets/potatoes.png');
+}
+
+.radish {
+    background-image: url('assets/radish.png');
+}
+
+.spinach {
+    background-image: url('assets/spinach.png');
+}
+
+.swissChard {
+    background-image: url('assets/swissChard.png');
+}
+
+.tomatoes {
+    background-image: url('assets/tomatoes.png');
 }
